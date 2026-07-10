@@ -1,0 +1,3936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.hexaware.fastx.service.PaymentServiceTest" time="0.671" tests="5" errors="0" skipped="0" failures="0" flakes="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/media/adhitya/My Space/Academy/FastX_Full_Designed/FastX_Backend/target/test-classes:/media/adhitya/My Space/Academy/FastX_Full_Designed/FastX_Backend/target/classes:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.15/spring-boot-starter-data-jpa-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.15/spring-boot-starter-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar:/home/adhitya/.m2/repository/ch/qos/logback/logback-classic/1.5.34/logback-classic-1.5.34.jar:/home/adhitya/.m2/repository/ch/qos/logback/logback-core/1.5.34/logback-core-1.5.34.jar:/home/adhitya/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/adhitya/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/adhitya/.m2/repository/org/slf4j/jul-to-slf4j/2.0.18/jul-to-slf4j-2.0.18.jar:/home/adhitya/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/adhitya/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar:/home/adhitya/.m2/repository/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3.jar:/home/adhitya/.m2/repository/org/springframework/spring-jdbc/6.2.19/spring-jdbc-6.2.19.jar:/home/adhitya/.m2/repository/org/hibernate/orm/hibernate-core/6.6.53.Final/hibernate-core-6.6.53.Final.jar:/home/adhitya/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/adhitya/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/adhitya/.m2/repository/org/jboss/logging/jboss-logging/3.6.3.Final/jboss-logging-3.6.3.Final.jar:/home/adhitya/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/adhitya/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/adhitya/.m2/repository/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar:/home/adhitya/.m2/repository/net/bytebuddy/byte-buddy/1.17.8/byte-buddy-1.17.8.jar:/home/adhitya/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.9/jaxb-runtime-4.0.9.jar:/home/adhitya/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.9/jaxb-core-4.0.9.jar:/home/adhitya/.m2/repository/org/glassfish/jaxb/txw2/4.0.9/txw2-4.0.9.jar:/home/adhitya/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/adhitya/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/adhitya/.m2/repository/org/antlr/antlr4-runtime/4.13.2/antlr4-runtime-4.13.2.jar:/home/adhitya/.m2/repository/org/springframework/data/spring-data-jpa/3.5.12/spring-data-jpa-3.5.12.jar:/home/adhitya/.m2/repository/org/springframework/data/spring-data-commons/3.5.12/spring-data-commons-3.5.12.jar:/home/adhitya/.m2/repository/org/springframework/spring-orm/6.2.19/spring-orm-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-tx/6.2.19/spring-tx-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar:/home/adhitya/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar:/home/adhitya/.m2/repository/org/springframework/spring-aspects/6.2.19/spring-aspects-6.2.19.jar:/home/adhitya/.m2/repository/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar:/home/adhitya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar:/home/adhitya/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final.jar:/home/adhitya/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.15/spring-boot-starter-web-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.21.4/jackson-datatype-jdk8-2.21.4.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.4/jackson-datatype-jsr310-2.21.4.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.21.4/jackson-module-parameter-names-2.21.4.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar:/home/adhitya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.55/tomcat-embed-core-10.1.55.jar:/home/adhitya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.jar:/home/adhitya/.m2/repository/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar:/home/adhitya/.m2/repository/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar:/home/adhitya/.m2/repository/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar:/home/adhitya/.m2/repository/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/spring-aop/6.2.19/spring-aop-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/security/spring-security-config/6.5.11/spring-security-config-6.5.11.jar:/home/adhitya/.m2/repository/org/springframework/security/spring-security-web/6.5.11/spring-security-web-6.5.11.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-mail/3.5.15/spring-boot-starter-mail-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/spring-context-support/6.2.19/spring-context-support-6.2.19.jar:/home/adhitya/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.5/jakarta.mail-2.0.5.jar:/home/adhitya/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/home/adhitya/.m2/repository/org/eclipse/angus/angus-activation/2.0.3/angus-activation-2.0.3.jar:/home/adhitya/.m2/repository/com/google/api-client/google-api-client/2.7.0/google-api-client-2.7.0.jar:/home/adhitya/.m2/repository/commons-codec/commons-codec/1.18.0/commons-codec-1.18.0.jar:/home/adhitya/.m2/repository/com/google/oauth-client/google-oauth-client/1.36.0/google-oauth-client-1.36.0.jar:/home/adhitya/.m2/repository/com/google/auth/google-auth-library-credentials/1.23.0/google-auth-library-credentials-1.23.0.jar:/home/adhitya/.m2/repository/com/google/auth/google-auth-library-oauth2-http/1.23.0/google-auth-library-oauth2-http-1.23.0.jar:/home/adhitya/.m2/repository/com/google/auto/value/auto-value-annotations/1.10.4/auto-value-annotations-1.10.4.jar:/home/adhitya/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/adhitya/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/home/adhitya/.m2/repository/com/google/http-client/google-http-client-gson/1.45.0/google-http-client-gson-1.45.0.jar:/home/adhitya/.m2/repository/com/google/code/gson/gson/2.13.2/gson-2.13.2.jar:/home/adhitya/.m2/repository/com/google/guava/guava/33.1.0-jre/guava-33.1.0-jre.jar:/home/adhitya/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/adhitya/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/adhitya/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/adhitya/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/adhitya/.m2/repository/com/google/http-client/google-http-client-apache-v2/1.45.0/google-http-client-apache-v2-1.45.0.jar:/home/adhitya/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/adhitya/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/home/adhitya/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/adhitya/.m2/repository/com/google/http-client/google-http-client/1.45.0/google-http-client-1.45.0.jar:/home/adhitya/.m2/repository/io/grpc/grpc-context/1.66.0/grpc-context-1.66.0.jar:/home/adhitya/.m2/repository/io/grpc/grpc-api/1.66.0/grpc-api-1.66.0.jar:/home/adhitya/.m2/repository/io/opencensus/opencensus-api/0.31.1/opencensus-api-0.31.1.jar:/home/adhitya/.m2/repository/io/opencensus/opencensus-contrib-http-util/0.31.1/opencensus-contrib-http-util-0.31.1.jar:/home/adhitya/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/home/adhitya/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/home/adhitya/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.21.4/jackson-databind-2.21.4.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.21.4/jackson-core-2.21.4.jar:/home/adhitya/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.8.9/springdoc-openapi-starter-webmvc-ui-2.8.9.jar:/home/adhitya/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.8.9/springdoc-openapi-starter-webmvc-api-2.8.9.jar:/home/adhitya/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.8.9/springdoc-openapi-starter-common-2.8.9.jar:/home/adhitya/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.30/swagger-core-jakarta-2.2.30.jar:/home/adhitya/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.30/swagger-annotations-jakarta-2.2.30.jar:/home/adhitya/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.30/swagger-models-jakarta-2.2.30.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.21.4/jackson-dataformat-yaml-2.21.4.jar:/home/adhitya/.m2/repository/org/webjars/swagger-ui/5.21.0/swagger-ui-5.21.0.jar:/home/adhitya/.m2/repository/org/webjars/webjars-locator-lite/1.1.3/webjars-locator-lite-1.1.3.jar:/home/adhitya/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/adhitya/.m2/repository/com/mysql/mysql-connector-j/9.7.0/mysql-connector-j-9.7.0.jar:/home/adhitya/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar:/home/adhitya/.m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar:/home/adhitya/.m2/repository/com/razorpay/razorpay-java/1.4.5/razorpay-java-1.4.5.jar:/home/adhitya/.m2/repository/org/json/json/20180130/json-20180130.jar:/home/adhitya/.m2/repository/com/squareup/okhttp3/okhttp/3.10.0/okhttp-3.10.0.jar:/home/adhitya/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/home/adhitya/.m2/repository/com/squareup/okhttp3/logging-interceptor/3.10.0/logging-interceptor-3.10.0.jar:/home/adhitya/.m2/repository/org/apache/commons/commons-text/1.3/commons-text-1.3.jar:/home/adhitya/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.15/spring-boot-starter-test-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-test/3.5.15/spring-boot-test-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.15/spring-boot-test-autoconfigure-3.5.15.jar:/home/adhitya/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/adhitya/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.5/jakarta.xml.bind-api-4.0.5.jar:/home/adhitya/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/home/adhitya/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/home/adhitya/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/adhitya/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/home/adhitya/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/adhitya/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/adhitya/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/home/adhitya/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/home/adhitya/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/adhitya/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/home/adhitya/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/adhitya/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/home/adhitya/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/home/adhitya/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/home/adhitya/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/home/adhitya/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar:/home/adhitya/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/adhitya/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/home/adhitya/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/adhitya/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/adhitya/.m2/repository/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-test/6.2.19/spring-test-6.2.19.jar:/home/adhitya/.m2/repository/org/xmlunit/xmlunit-core/2.10.4/xmlunit-core-2.10.4.jar:/home/adhitya/.m2/repository/org/springframework/security/spring-security-test/6.5.11/spring-security-test-6.5.11.jar:/home/adhitya/.m2/repository/org/springframework/security/spring-security-core/6.5.11/spring-security-core-6.5.11.jar:/home/adhitya/.m2/repository/org/springframework/security/spring-security-crypto/6.5.11/spring-security-crypto-6.5.11.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="APPLICATION_NAME" value="FastX-Test"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/media/adhitya/My Space/Academy/FastX_Full_Designed/FastX_Backend/target/surefire/surefirebooter-20260710094219400_3.jar /media/adhitya/My Space/Academy/FastX_Full_Designed/FastX_Backend/target/surefire 2026-07-10T09-42-19_335-jvmRun1 surefire-20260710094219400_1tmp surefire_0-20260710094219400_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/media/adhitya/My Space/Academy/FastX_Full_Designed/FastX_Backend/target/test-classes:/media/adhitya/My Space/Academy/FastX_Full_Designed/FastX_Backend/target/classes:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.15/spring-boot-starter-data-jpa-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.15/spring-boot-starter-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot/3.5.15/spring-boot-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.15/spring-boot-autoconfigure-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.15/spring-boot-starter-logging-3.5.15.jar:/home/adhitya/.m2/repository/ch/qos/logback/logback-classic/1.5.34/logback-classic-1.5.34.jar:/home/adhitya/.m2/repository/ch/qos/logback/logback-core/1.5.34/logback-core-1.5.34.jar:/home/adhitya/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/adhitya/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/adhitya/.m2/repository/org/slf4j/jul-to-slf4j/2.0.18/jul-to-slf4j-2.0.18.jar:/home/adhitya/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/adhitya/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.15/spring-boot-starter-jdbc-3.5.15.jar:/home/adhitya/.m2/repository/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3.jar:/home/adhitya/.m2/repository/org/springframework/spring-jdbc/6.2.19/spring-jdbc-6.2.19.jar:/home/adhitya/.m2/repository/org/hibernate/orm/hibernate-core/6.6.53.Final/hibernate-core-6.6.53.Final.jar:/home/adhitya/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/adhitya/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/adhitya/.m2/repository/org/jboss/logging/jboss-logging/3.6.3.Final/jboss-logging-3.6.3.Final.jar:/home/adhitya/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/adhitya/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/adhitya/.m2/repository/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar:/home/adhitya/.m2/repository/net/bytebuddy/byte-buddy/1.17.8/byte-buddy-1.17.8.jar:/home/adhitya/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.9/jaxb-runtime-4.0.9.jar:/home/adhitya/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.9/jaxb-core-4.0.9.jar:/home/adhitya/.m2/repository/org/glassfish/jaxb/txw2/4.0.9/txw2-4.0.9.jar:/home/adhitya/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/adhitya/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/adhitya/.m2/repository/org/antlr/antlr4-runtime/4.13.2/antlr4-runtime-4.13.2.jar:/home/adhitya/.m2/repository/org/springframework/data/spring-data-jpa/3.5.12/spring-data-jpa-3.5.12.jar:/home/adhitya/.m2/repository/org/springframework/data/spring-data-commons/3.5.12/spring-data-commons-3.5.12.jar:/home/adhitya/.m2/repository/org/springframework/spring-orm/6.2.19/spring-orm-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-context/6.2.19/spring-context-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-tx/6.2.19/spring-tx-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-beans/6.2.19/spring-beans-6.2.19.jar:/home/adhitya/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar:/home/adhitya/.m2/repository/org/springframework/spring-aspects/6.2.19/spring-aspects-6.2.19.jar:/home/adhitya/.m2/repository/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.15/spring-boot-starter-validation-3.5.15.jar:/home/adhitya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.55/tomcat-embed-el-10.1.55.jar:/home/adhitya/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final.jar:/home/adhitya/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.15/spring-boot-starter-web-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.15/spring-boot-starter-json-3.5.15.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.21.4/jackson-datatype-jdk8-2.21.4.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.4/jackson-datatype-jsr310-2.21.4.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.21.4/jackson-module-parameter-names-2.21.4.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.15/spring-boot-starter-tomcat-3.5.15.jar:/home/adhitya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.55/tomcat-embed-core-10.1.55.jar:/home/adhitya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.55/tomcat-embed-websocket-10.1.55.jar:/home/adhitya/.m2/repository/org/springframework/spring-web/6.2.19/spring-web-6.2.19.jar:/home/adhitya/.m2/repository/io/micrometer/micrometer-observation/1.15.12/micrometer-observation-1.15.12.jar:/home/adhitya/.m2/repository/io/micrometer/micrometer-commons/1.15.12/micrometer-commons-1.15.12.jar:/home/adhitya/.m2/repository/org/springframework/spring-webmvc/6.2.19/spring-webmvc-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-expression/6.2.19/spring-expression-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.5.15/spring-boot-starter-security-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/spring-aop/6.2.19/spring-aop-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/security/spring-security-config/6.5.11/spring-security-config-6.5.11.jar:/home/adhitya/.m2/repository/org/springframework/security/spring-security-web/6.5.11/spring-security-web-6.5.11.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-mail/3.5.15/spring-boot-starter-mail-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/spring-context-support/6.2.19/spring-context-support-6.2.19.jar:/home/adhitya/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.5/jakarta.mail-2.0.5.jar:/home/adhitya/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/home/adhitya/.m2/repository/org/eclipse/angus/angus-activation/2.0.3/angus-activation-2.0.3.jar:/home/adhitya/.m2/repository/com/google/api-client/google-api-client/2.7.0/google-api-client-2.7.0.jar:/home/adhitya/.m2/repository/commons-codec/commons-codec/1.18.0/commons-codec-1.18.0.jar:/home/adhitya/.m2/repository/com/google/oauth-client/google-oauth-client/1.36.0/google-oauth-client-1.36.0.jar:/home/adhitya/.m2/repository/com/google/auth/google-auth-library-credentials/1.23.0/google-auth-library-credentials-1.23.0.jar:/home/adhitya/.m2/repository/com/google/auth/google-auth-library-oauth2-http/1.23.0/google-auth-library-oauth2-http-1.23.0.jar:/home/adhitya/.m2/repository/com/google/auto/value/auto-value-annotations/1.10.4/auto-value-annotations-1.10.4.jar:/home/adhitya/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/adhitya/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/home/adhitya/.m2/repository/com/google/http-client/google-http-client-gson/1.45.0/google-http-client-gson-1.45.0.jar:/home/adhitya/.m2/repository/com/google/code/gson/gson/2.13.2/gson-2.13.2.jar:/home/adhitya/.m2/repository/com/google/guava/guava/33.1.0-jre/guava-33.1.0-jre.jar:/home/adhitya/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/adhitya/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/adhitya/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/adhitya/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/adhitya/.m2/repository/com/google/http-client/google-http-client-apache-v2/1.45.0/google-http-client-apache-v2-1.45.0.jar:/home/adhitya/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/adhitya/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/home/adhitya/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/adhitya/.m2/repository/com/google/http-client/google-http-client/1.45.0/google-http-client-1.45.0.jar:/home/adhitya/.m2/repository/io/grpc/grpc-context/1.66.0/grpc-context-1.66.0.jar:/home/adhitya/.m2/repository/io/grpc/grpc-api/1.66.0/grpc-api-1.66.0.jar:/home/adhitya/.m2/repository/io/opencensus/opencensus-api/0.31.1/opencensus-api-0.31.1.jar:/home/adhitya/.m2/repository/io/opencensus/opencensus-contrib-http-util/0.31.1/opencensus-contrib-http-util-0.31.1.jar:/home/adhitya/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/home/adhitya/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/home/adhitya/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.21.4/jackson-databind-2.21.4.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.21.4/jackson-core-2.21.4.jar:/home/adhitya/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.8.9/springdoc-openapi-starter-webmvc-ui-2.8.9.jar:/home/adhitya/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.8.9/springdoc-openapi-starter-webmvc-api-2.8.9.jar:/home/adhitya/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.8.9/springdoc-openapi-starter-common-2.8.9.jar:/home/adhitya/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.30/swagger-core-jakarta-2.2.30.jar:/home/adhitya/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.30/swagger-annotations-jakarta-2.2.30.jar:/home/adhitya/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.30/swagger-models-jakarta-2.2.30.jar:/home/adhitya/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.21.4/jackson-dataformat-yaml-2.21.4.jar:/home/adhitya/.m2/repository/org/webjars/swagger-ui/5.21.0/swagger-ui-5.21.0.jar:/home/adhitya/.m2/repository/org/webjars/webjars-locator-lite/1.1.3/webjars-locator-lite-1.1.3.jar:/home/adhitya/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/adhitya/.m2/repository/com/mysql/mysql-connector-j/9.7.0/mysql-connector-j-9.7.0.jar:/home/adhitya/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar:/home/adhitya/.m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar:/home/adhitya/.m2/repository/com/razorpay/razorpay-java/1.4.5/razorpay-java-1.4.5.jar:/home/adhitya/.m2/repository/org/json/json/20180130/json-20180130.jar:/home/adhitya/.m2/repository/com/squareup/okhttp3/okhttp/3.10.0/okhttp-3.10.0.jar:/home/adhitya/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/home/adhitya/.m2/repository/com/squareup/okhttp3/logging-interceptor/3.10.0/logging-interceptor-3.10.0.jar:/home/adhitya/.m2/repository/org/apache/commons/commons-text/1.3/commons-text-1.3.jar:/home/adhitya/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.15/spring-boot-starter-test-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-test/3.5.15/spring-boot-test-3.5.15.jar:/home/adhitya/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.15/spring-boot-test-autoconfigure-3.5.15.jar:/home/adhitya/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/adhitya/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.5/jakarta.xml.bind-api-4.0.5.jar:/home/adhitya/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/home/adhitya/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/home/adhitya/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/adhitya/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/home/adhitya/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/adhitya/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/adhitya/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/home/adhitya/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/home/adhitya/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/adhitya/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/home/adhitya/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/adhitya/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/home/adhitya/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/home/adhitya/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/home/adhitya/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/home/adhitya/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar:/home/adhitya/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/adhitya/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/home/adhitya/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/adhitya/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/adhitya/.m2/repository/org/springframework/spring-core/6.2.19/spring-core-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-jcl/6.2.19/spring-jcl-6.2.19.jar:/home/adhitya/.m2/repository/org/springframework/spring-test/6.2.19/spring-test-6.2.19.jar:/home/adhitya/.m2/repository/org/xmlunit/xmlunit-core/2.10.4/xmlunit-core-2.10.4.jar:/home/adhitya/.m2/repository/org/springframework/security/spring-security-test/6.5.11/spring-security-test-6.5.11.jar:/home/adhitya/.m2/repository/org/springframework/security/spring-security-core/6.5.11/spring-security-core-6.5.11.jar:/home/adhitya/.m2/repository/org/springframework/security/spring-security-crypto/6.5.11/spring-security-crypto-6.5.11.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/adhitya"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-04-21"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/media/adhitya/My Space/Academy/FastX_Full_Designed/FastX_Backend"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/media/adhitya/My Space/Academy/FastX_Full_Designed/FastX_Backend/target/surefire/surefirebooter-20260710094219400_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.19+10-1-24.04.2-Ubuntu"/>
+    <property name="user.name" value="adhitya"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.17.0-23-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/adhitya/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-17"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="17.0.19"/>
+    <property name="user.dir" value="/media/adhitya/My Space/Academy/FastX_Full_Designed/FastX_Backend"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="66787"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="17.0.19+10-1-24.04.2-Ubuntu"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[FastX-Test] "/>
+  </properties>
+  <testcase name="testProcessPayment" classname="com.hexaware.fastx.service.PaymentServiceTest" time="0.131">
+    <system-out><![CDATA[2026-07-10T09:42:28.150+05:30  INFO 66787 --- [FastX-Test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hexaware.fastx.service.PaymentServiceTest]: PaymentServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-10T09:42:28.152+05:30  INFO 66787 --- [FastX-Test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hexaware.fastx.FastXApplication for test class com.hexaware.fastx.service.PaymentServiceTest
+2026-07-10T09:42:28.156+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (role_name, role_id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (role_name, role_id) 
+    values
+        (?, default)
+2026-07-10T09:42:28.156+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.RoleServiceImpl   : Role created with ID: 22
+2026-07-10T09:42:28.157+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.user_id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.user_id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-07-10T09:42:28.212+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (address, auth_provider, created_at, email, full_name, gender, google_id, is_active, password, phone_number, role_id, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (address, auth_provider, created_at, email, full_name, gender, google_id, is_active, password, phone_number, role_id, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.213+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.UserServiceImpl   : User created with ID: 16
+2026-07-10T09:42:28.267+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bus_operators
+        (address, company_name, created_at, email, is_active, password, phone_number, updated_at, operator_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        bus_operators
+        (address, company_name, created_at, email, is_active, password, phone_number, updated_at, operator_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.268+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.s.impl.BusOperatorServiceImpl      : Bus Operator created with ID: 16
+2026-07-10T09:42:28.268+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        buses
+        (arrival_time, bus_name, bus_number, operator_id, bus_type, created_at, departure_time, destination, fare, journey_date, origin, total_seats, updated_at, bus_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        buses
+        (arrival_time, bus_name, bus_number, operator_id, bus_type, created_at, departure_time, destination, fare, journey_date, origin, total_seats, updated_at, bus_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.269+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.BusServiceImpl    : Bus added with ID: 16
+2026-07-10T09:42:28.269+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.269+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.269+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.269+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.269+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.270+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.270+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.270+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.270+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.270+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.270+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.271+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.271+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.271+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.271+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.271+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.271+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.271+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.272+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.272+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.272+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.272+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.273+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.273+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.273+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.273+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.273+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.273+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.274+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.274+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.274+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.274+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.274+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.275+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.275+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.275+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.275+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.275+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.275+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.276+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.276+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.BusServiceImpl    : 40 seats created for Bus ID: 16
+2026-07-10T09:42:28.276+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        s1_0.seat_id,
+        s1_0.bus_id,
+        s1_0.created_at,
+        s1_0.reserved_booking_id,
+        s1_0.seat_number,
+        s1_0.seat_status,
+        s1_0.seat_type,
+        s1_0.updated_at 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+Hibernate: 
+    select
+        s1_0.seat_id,
+        s1_0.bus_id,
+        s1_0.created_at,
+        s1_0.reserved_booking_id,
+        s1_0.seat_number,
+        s1_0.seat_status,
+        s1_0.seat_type,
+        s1_0.updated_at 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+2026-07-10T09:42:28.277+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Creating booking for User ID: 16 on Bus ID: 16
+2026-07-10T09:42:28.277+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Number of passengers: 1
+2026-07-10T09:42:28.278+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        count(s1_0.seat_id) 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+Hibernate: 
+    select
+        count(s1_0.seat_id) 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+2026-07-10T09:42:28.278+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Total amount calculated: 500.0 (fare 500.0 x 1 passengers)
+2026-07-10T09:42:28.278+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Reservation expires at: 2026-07-10T10:12:28.278917890 (30-minute window)
+2026-07-10T09:42:28.279+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bookings
+        (booking_date, booking_status, bus_id, created_at, reservation_expires_at, total_amount, updated_at, user_id, booking_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        bookings
+        (booking_date, booking_status, bus_id, created_at, reservation_expires_at, total_amount, updated_at, user_id, booking_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.279+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking saved with auto-generated ID: 15. User will use this ID to complete payment.
+2026-07-10T09:42:28.279+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.SeatServiceImpl   : Seat reserved (held for payment): B16-01 for Booking ID: 15
+2026-07-10T09:42:28.279+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        passengers
+        (age, booking_id, created_at, gender, name, seat_id, updated_at, passenger_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        passengers
+        (age, booking_id, created_at, gender, name, seat_id, updated_at, passenger_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.280+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Passenger added: Buddy (Age: 21) -> Seat: B16-01
+2026-07-10T09:42:28.280+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        payments
+        (amount, booking_id, created_at, payment_date, payment_method, payment_status, transaction_id, updated_at, payment_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payments
+        (amount, booking_id, created_at, payment_date, payment_method, payment_status, transaction_id, updated_at, payment_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.280+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Pending payment record created for Booking ID: 15
+2026-07-10T09:42:28.280+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking created successfully! Booking ID: 15 | Status: PENDING | Seats: RESERVED for 30 mins | Complete payment to confirm.
+2026-07-10T09:42:28.281+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        p1_0.payment_id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.payment_date,
+        p1_0.payment_method,
+        p1_0.payment_status,
+        p1_0.transaction_id,
+        p1_0.updated_at 
+    from
+        payments p1_0 
+    where
+        p1_0.booking_id=?
+Hibernate: 
+    select
+        p1_0.payment_id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.payment_date,
+        p1_0.payment_method,
+        p1_0.payment_status,
+        p1_0.transaction_id,
+        p1_0.updated_at 
+    from
+        payments p1_0 
+    where
+        p1_0.booking_id=?
+2026-07-10T09:42:28.281+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.PaymentServiceImpl    : Payment processed successfully for Booking ID: 15. Transaction ID: ac0bd1c9-6848-45d1-9eae-d1168aa879bd
+2026-07-10T09:42:28.281+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Confirming booking with ID: 15
+2026-07-10T09:42:28.282+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.SeatServiceImpl   : Seat confirmed (BOOKED): B16-01
+2026-07-10T09:42:28.282+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Seats confirmed (RESERVED -> BOOKED) for Booking ID: 15
+2026-07-10T09:42:28.282+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking confirmed successfully. Booking ID: 15 | Seats are now permanently BOOKED.
+2026-07-10T09:42:28.282+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.PaymentServiceImpl    : Booking auto-confirmed after payment. Booking ID: 15 | Seats are now permanently BOOKED.
+]]></system-out>
+  </testcase>
+  <testcase name="testRefundPayment" classname="com.hexaware.fastx.service.PaymentServiceTest" time="0.137">
+    <system-out><![CDATA[2026-07-10T09:42:28.288+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (role_name, role_id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (role_name, role_id) 
+    values
+        (?, default)
+2026-07-10T09:42:28.288+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.RoleServiceImpl   : Role created with ID: 23
+2026-07-10T09:42:28.289+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.user_id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.user_id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-07-10T09:42:28.344+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (address, auth_provider, created_at, email, full_name, gender, google_id, is_active, password, phone_number, role_id, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (address, auth_provider, created_at, email, full_name, gender, google_id, is_active, password, phone_number, role_id, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.345+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.UserServiceImpl   : User created with ID: 17
+2026-07-10T09:42:28.403+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bus_operators
+        (address, company_name, created_at, email, is_active, password, phone_number, updated_at, operator_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        bus_operators
+        (address, company_name, created_at, email, is_active, password, phone_number, updated_at, operator_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.404+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.s.impl.BusOperatorServiceImpl      : Bus Operator created with ID: 17
+2026-07-10T09:42:28.404+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        buses
+        (arrival_time, bus_name, bus_number, operator_id, bus_type, created_at, departure_time, destination, fare, journey_date, origin, total_seats, updated_at, bus_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        buses
+        (arrival_time, bus_name, bus_number, operator_id, bus_type, created_at, departure_time, destination, fare, journey_date, origin, total_seats, updated_at, bus_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.405+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.BusServiceImpl    : Bus added with ID: 17
+2026-07-10T09:42:28.405+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.405+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.405+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.406+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.406+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.406+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.406+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.406+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.406+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.407+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.407+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.407+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.407+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.407+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.407+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.407+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.408+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.408+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.408+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.408+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.408+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.408+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.408+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.408+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.408+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.409+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.409+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.409+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.409+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.409+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.409+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.409+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.410+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.410+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.410+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.410+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.411+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.411+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.411+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.411+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.411+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.BusServiceImpl    : 40 seats created for Bus ID: 17
+2026-07-10T09:42:28.412+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        s1_0.seat_id,
+        s1_0.bus_id,
+        s1_0.created_at,
+        s1_0.reserved_booking_id,
+        s1_0.seat_number,
+        s1_0.seat_status,
+        s1_0.seat_type,
+        s1_0.updated_at 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+Hibernate: 
+    select
+        s1_0.seat_id,
+        s1_0.bus_id,
+        s1_0.created_at,
+        s1_0.reserved_booking_id,
+        s1_0.seat_number,
+        s1_0.seat_status,
+        s1_0.seat_type,
+        s1_0.updated_at 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+2026-07-10T09:42:28.413+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Creating booking for User ID: 17 on Bus ID: 17
+2026-07-10T09:42:28.413+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Number of passengers: 1
+2026-07-10T09:42:28.414+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        count(s1_0.seat_id) 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+Hibernate: 
+    select
+        count(s1_0.seat_id) 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+2026-07-10T09:42:28.415+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Total amount calculated: 500.0 (fare 500.0 x 1 passengers)
+2026-07-10T09:42:28.415+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Reservation expires at: 2026-07-10T10:12:28.415352371 (30-minute window)
+2026-07-10T09:42:28.415+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bookings
+        (booking_date, booking_status, bus_id, created_at, reservation_expires_at, total_amount, updated_at, user_id, booking_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        bookings
+        (booking_date, booking_status, bus_id, created_at, reservation_expires_at, total_amount, updated_at, user_id, booking_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.415+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking saved with auto-generated ID: 16. User will use this ID to complete payment.
+2026-07-10T09:42:28.415+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.SeatServiceImpl   : Seat reserved (held for payment): B17-01 for Booking ID: 16
+2026-07-10T09:42:28.416+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        passengers
+        (age, booking_id, created_at, gender, name, seat_id, updated_at, passenger_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        passengers
+        (age, booking_id, created_at, gender, name, seat_id, updated_at, passenger_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.416+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Passenger added: Buddy (Age: 21) -> Seat: B17-01
+2026-07-10T09:42:28.416+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        payments
+        (amount, booking_id, created_at, payment_date, payment_method, payment_status, transaction_id, updated_at, payment_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payments
+        (amount, booking_id, created_at, payment_date, payment_method, payment_status, transaction_id, updated_at, payment_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.416+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Pending payment record created for Booking ID: 16
+2026-07-10T09:42:28.416+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking created successfully! Booking ID: 16 | Status: PENDING | Seats: RESERVED for 30 mins | Complete payment to confirm.
+2026-07-10T09:42:28.417+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        p1_0.payment_id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.payment_date,
+        p1_0.payment_method,
+        p1_0.payment_status,
+        p1_0.transaction_id,
+        p1_0.updated_at 
+    from
+        payments p1_0 
+    where
+        p1_0.booking_id=?
+Hibernate: 
+    select
+        p1_0.payment_id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.payment_date,
+        p1_0.payment_method,
+        p1_0.payment_status,
+        p1_0.transaction_id,
+        p1_0.updated_at 
+    from
+        payments p1_0 
+    where
+        p1_0.booking_id=?
+2026-07-10T09:42:28.417+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.PaymentServiceImpl    : Payment processed successfully for Booking ID: 16. Transaction ID: 5ad54a15-3740-4abf-81d8-a96541bc951c
+2026-07-10T09:42:28.418+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Confirming booking with ID: 16
+2026-07-10T09:42:28.418+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.SeatServiceImpl   : Seat confirmed (BOOKED): B17-01
+2026-07-10T09:42:28.418+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Seats confirmed (RESERVED -> BOOKED) for Booking ID: 16
+2026-07-10T09:42:28.418+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking confirmed successfully. Booking ID: 16 | Seats are now permanently BOOKED.
+2026-07-10T09:42:28.418+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.PaymentServiceImpl    : Booking auto-confirmed after payment. Booking ID: 16 | Seats are now permanently BOOKED.
+2026-07-10T09:42:28.419+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.PaymentServiceImpl    : Payment refunded for ID: 16
+]]></system-out>
+  </testcase>
+  <testcase name="testVerifyPayment" classname="com.hexaware.fastx.service.PaymentServiceTest" time="0.133">
+    <system-out><![CDATA[2026-07-10T09:42:28.424+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (role_name, role_id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (role_name, role_id) 
+    values
+        (?, default)
+2026-07-10T09:42:28.425+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.RoleServiceImpl   : Role created with ID: 24
+2026-07-10T09:42:28.426+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.user_id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.user_id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-07-10T09:42:28.482+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (address, auth_provider, created_at, email, full_name, gender, google_id, is_active, password, phone_number, role_id, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (address, auth_provider, created_at, email, full_name, gender, google_id, is_active, password, phone_number, role_id, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.483+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.UserServiceImpl   : User created with ID: 18
+2026-07-10T09:42:28.538+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bus_operators
+        (address, company_name, created_at, email, is_active, password, phone_number, updated_at, operator_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        bus_operators
+        (address, company_name, created_at, email, is_active, password, phone_number, updated_at, operator_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.538+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.s.impl.BusOperatorServiceImpl      : Bus Operator created with ID: 18
+2026-07-10T09:42:28.539+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        buses
+        (arrival_time, bus_name, bus_number, operator_id, bus_type, created_at, departure_time, destination, fare, journey_date, origin, total_seats, updated_at, bus_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        buses
+        (arrival_time, bus_name, bus_number, operator_id, bus_type, created_at, departure_time, destination, fare, journey_date, origin, total_seats, updated_at, bus_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.539+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.BusServiceImpl    : Bus added with ID: 18
+2026-07-10T09:42:28.539+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.539+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.539+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.539+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.540+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.540+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.540+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.540+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.540+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.540+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.540+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.540+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.541+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.541+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.541+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.541+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.541+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.541+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.541+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.541+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.542+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.542+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.542+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.542+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.542+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.543+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.543+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.543+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.543+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.543+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.544+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.544+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.544+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.544+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.544+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.545+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.545+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.545+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.545+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.545+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.545+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.BusServiceImpl    : 40 seats created for Bus ID: 18
+2026-07-10T09:42:28.546+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        s1_0.seat_id,
+        s1_0.bus_id,
+        s1_0.created_at,
+        s1_0.reserved_booking_id,
+        s1_0.seat_number,
+        s1_0.seat_status,
+        s1_0.seat_type,
+        s1_0.updated_at 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+Hibernate: 
+    select
+        s1_0.seat_id,
+        s1_0.bus_id,
+        s1_0.created_at,
+        s1_0.reserved_booking_id,
+        s1_0.seat_number,
+        s1_0.seat_status,
+        s1_0.seat_type,
+        s1_0.updated_at 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+2026-07-10T09:42:28.547+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Creating booking for User ID: 18 on Bus ID: 18
+2026-07-10T09:42:28.547+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Number of passengers: 1
+2026-07-10T09:42:28.547+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        count(s1_0.seat_id) 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+Hibernate: 
+    select
+        count(s1_0.seat_id) 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+2026-07-10T09:42:28.548+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Total amount calculated: 500.0 (fare 500.0 x 1 passengers)
+2026-07-10T09:42:28.548+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Reservation expires at: 2026-07-10T10:12:28.548662755 (30-minute window)
+2026-07-10T09:42:28.549+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bookings
+        (booking_date, booking_status, bus_id, created_at, reservation_expires_at, total_amount, updated_at, user_id, booking_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        bookings
+        (booking_date, booking_status, bus_id, created_at, reservation_expires_at, total_amount, updated_at, user_id, booking_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.549+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking saved with auto-generated ID: 17. User will use this ID to complete payment.
+2026-07-10T09:42:28.550+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.SeatServiceImpl   : Seat reserved (held for payment): B18-01 for Booking ID: 17
+2026-07-10T09:42:28.550+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        passengers
+        (age, booking_id, created_at, gender, name, seat_id, updated_at, passenger_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        passengers
+        (age, booking_id, created_at, gender, name, seat_id, updated_at, passenger_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.550+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Passenger added: Buddy (Age: 21) -> Seat: B18-01
+2026-07-10T09:42:28.551+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        payments
+        (amount, booking_id, created_at, payment_date, payment_method, payment_status, transaction_id, updated_at, payment_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payments
+        (amount, booking_id, created_at, payment_date, payment_method, payment_status, transaction_id, updated_at, payment_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.551+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Pending payment record created for Booking ID: 17
+2026-07-10T09:42:28.551+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking created successfully! Booking ID: 17 | Status: PENDING | Seats: RESERVED for 30 mins | Complete payment to confirm.
+2026-07-10T09:42:28.552+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        p1_0.payment_id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.payment_date,
+        p1_0.payment_method,
+        p1_0.payment_status,
+        p1_0.transaction_id,
+        p1_0.updated_at 
+    from
+        payments p1_0 
+    where
+        p1_0.booking_id=?
+Hibernate: 
+    select
+        p1_0.payment_id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.payment_date,
+        p1_0.payment_method,
+        p1_0.payment_status,
+        p1_0.transaction_id,
+        p1_0.updated_at 
+    from
+        payments p1_0 
+    where
+        p1_0.booking_id=?
+2026-07-10T09:42:28.553+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.PaymentServiceImpl    : Payment processed successfully for Booking ID: 17. Transaction ID: eb7ea6d2-6b13-4d09-bb0d-a3f30f420a4d
+2026-07-10T09:42:28.553+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Confirming booking with ID: 17
+2026-07-10T09:42:28.553+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.SeatServiceImpl   : Seat confirmed (BOOKED): B18-01
+2026-07-10T09:42:28.553+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Seats confirmed (RESERVED -> BOOKED) for Booking ID: 17
+2026-07-10T09:42:28.553+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking confirmed successfully. Booking ID: 17 | Seats are now permanently BOOKED.
+2026-07-10T09:42:28.553+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.PaymentServiceImpl    : Booking auto-confirmed after payment. Booking ID: 17 | Seats are now permanently BOOKED.
+]]></system-out>
+  </testcase>
+  <testcase name="testProcessPaymentWithTransaction" classname="com.hexaware.fastx.service.PaymentServiceTest" time="0.128">
+    <system-out><![CDATA[2026-07-10T09:42:28.559+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (role_name, role_id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (role_name, role_id) 
+    values
+        (?, default)
+2026-07-10T09:42:28.559+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.RoleServiceImpl   : Role created with ID: 25
+2026-07-10T09:42:28.560+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.user_id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.user_id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-07-10T09:42:28.615+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (address, auth_provider, created_at, email, full_name, gender, google_id, is_active, password, phone_number, role_id, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (address, auth_provider, created_at, email, full_name, gender, google_id, is_active, password, phone_number, role_id, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.615+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.UserServiceImpl   : User created with ID: 19
+2026-07-10T09:42:28.669+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bus_operators
+        (address, company_name, created_at, email, is_active, password, phone_number, updated_at, operator_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        bus_operators
+        (address, company_name, created_at, email, is_active, password, phone_number, updated_at, operator_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.669+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.s.impl.BusOperatorServiceImpl      : Bus Operator created with ID: 19
+2026-07-10T09:42:28.670+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        buses
+        (arrival_time, bus_name, bus_number, operator_id, bus_type, created_at, departure_time, destination, fare, journey_date, origin, total_seats, updated_at, bus_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        buses
+        (arrival_time, bus_name, bus_number, operator_id, bus_type, created_at, departure_time, destination, fare, journey_date, origin, total_seats, updated_at, bus_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.670+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.BusServiceImpl    : Bus added with ID: 19
+2026-07-10T09:42:28.670+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.670+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.671+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.671+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.671+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.671+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.671+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.671+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.671+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.672+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.672+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.672+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.672+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.672+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.672+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.672+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.673+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.673+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.673+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.673+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.673+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.674+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.674+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.674+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.674+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.674+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.675+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.675+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.675+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.675+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.676+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.676+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.676+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.676+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.676+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.676+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.676+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.677+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.677+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.677+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.677+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.BusServiceImpl    : 40 seats created for Bus ID: 19
+2026-07-10T09:42:28.678+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        s1_0.seat_id,
+        s1_0.bus_id,
+        s1_0.created_at,
+        s1_0.reserved_booking_id,
+        s1_0.seat_number,
+        s1_0.seat_status,
+        s1_0.seat_type,
+        s1_0.updated_at 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+Hibernate: 
+    select
+        s1_0.seat_id,
+        s1_0.bus_id,
+        s1_0.created_at,
+        s1_0.reserved_booking_id,
+        s1_0.seat_number,
+        s1_0.seat_status,
+        s1_0.seat_type,
+        s1_0.updated_at 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+2026-07-10T09:42:28.678+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Creating booking for User ID: 19 on Bus ID: 19
+2026-07-10T09:42:28.678+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Number of passengers: 1
+2026-07-10T09:42:28.679+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        count(s1_0.seat_id) 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+Hibernate: 
+    select
+        count(s1_0.seat_id) 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+2026-07-10T09:42:28.679+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Total amount calculated: 500.0 (fare 500.0 x 1 passengers)
+2026-07-10T09:42:28.679+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Reservation expires at: 2026-07-10T10:12:28.679889948 (30-minute window)
+2026-07-10T09:42:28.680+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bookings
+        (booking_date, booking_status, bus_id, created_at, reservation_expires_at, total_amount, updated_at, user_id, booking_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        bookings
+        (booking_date, booking_status, bus_id, created_at, reservation_expires_at, total_amount, updated_at, user_id, booking_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.680+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking saved with auto-generated ID: 18. User will use this ID to complete payment.
+2026-07-10T09:42:28.680+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.SeatServiceImpl   : Seat reserved (held for payment): B19-01 for Booking ID: 18
+2026-07-10T09:42:28.680+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        passengers
+        (age, booking_id, created_at, gender, name, seat_id, updated_at, passenger_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        passengers
+        (age, booking_id, created_at, gender, name, seat_id, updated_at, passenger_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.680+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Passenger added: Buddy (Age: 21) -> Seat: B19-01
+2026-07-10T09:42:28.680+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        payments
+        (amount, booking_id, created_at, payment_date, payment_method, payment_status, transaction_id, updated_at, payment_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payments
+        (amount, booking_id, created_at, payment_date, payment_method, payment_status, transaction_id, updated_at, payment_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.681+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Pending payment record created for Booking ID: 18
+2026-07-10T09:42:28.681+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking created successfully! Booking ID: 18 | Status: PENDING | Seats: RESERVED for 30 mins | Complete payment to confirm.
+2026-07-10T09:42:28.682+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        p1_0.payment_id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.payment_date,
+        p1_0.payment_method,
+        p1_0.payment_status,
+        p1_0.transaction_id,
+        p1_0.updated_at 
+    from
+        payments p1_0 
+    where
+        p1_0.booking_id=?
+Hibernate: 
+    select
+        p1_0.payment_id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.payment_date,
+        p1_0.payment_method,
+        p1_0.payment_status,
+        p1_0.transaction_id,
+        p1_0.updated_at 
+    from
+        payments p1_0 
+    where
+        p1_0.booking_id=?
+2026-07-10T09:42:28.682+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.PaymentServiceImpl    : Razorpay payment recorded. Booking #18 | TxnID: pay_TEST_RAZORPAY123
+2026-07-10T09:42:28.682+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Confirming booking with ID: 18
+2026-07-10T09:42:28.682+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.SeatServiceImpl   : Seat confirmed (BOOKED): B19-01
+2026-07-10T09:42:28.682+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Seats confirmed (RESERVED -> BOOKED) for Booking ID: 18
+2026-07-10T09:42:28.682+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking confirmed successfully. Booking ID: 18 | Seats are now permanently BOOKED.
+2026-07-10T09:42:28.682+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.PaymentServiceImpl    : Booking #18 auto-confirmed after Razorpay payment.
+]]></system-out>
+  </testcase>
+  <testcase name="testGetPaymentByBookingId" classname="com.hexaware.fastx.service.PaymentServiceTest" time="0.133">
+    <system-out><![CDATA[2026-07-10T09:42:28.688+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        roles
+        (role_name, role_id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        roles
+        (role_name, role_id) 
+    values
+        (?, default)
+2026-07-10T09:42:28.688+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.RoleServiceImpl   : Role created with ID: 26
+2026-07-10T09:42:28.689+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.user_id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.user_id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-07-10T09:42:28.747+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (address, auth_provider, created_at, email, full_name, gender, google_id, is_active, password, phone_number, role_id, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (address, auth_provider, created_at, email, full_name, gender, google_id, is_active, password, phone_number, role_id, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.748+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.UserServiceImpl   : User created with ID: 20
+2026-07-10T09:42:28.801+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bus_operators
+        (address, company_name, created_at, email, is_active, password, phone_number, updated_at, operator_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        bus_operators
+        (address, company_name, created_at, email, is_active, password, phone_number, updated_at, operator_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.801+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.s.impl.BusOperatorServiceImpl      : Bus Operator created with ID: 20
+2026-07-10T09:42:28.802+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        buses
+        (arrival_time, bus_name, bus_number, operator_id, bus_type, created_at, departure_time, destination, fare, journey_date, origin, total_seats, updated_at, bus_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        buses
+        (arrival_time, bus_name, bus_number, operator_id, bus_type, created_at, departure_time, destination, fare, journey_date, origin, total_seats, updated_at, bus_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.802+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.BusServiceImpl    : Bus added with ID: 20
+2026-07-10T09:42:28.802+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.802+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.802+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.802+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.803+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.803+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.803+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.803+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.803+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.803+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.804+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.804+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.804+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.804+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.804+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.804+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.804+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.805+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.805+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.805+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.805+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.805+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.805+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.805+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.806+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.810+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.810+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.810+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.810+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.811+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.811+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.811+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.811+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.811+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.811+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.811+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.812+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.812+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.812+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.812+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seats
+        (bus_id, created_at, reserved_booking_id, seat_number, seat_status, seat_type, updated_at, seat_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.812+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.BusServiceImpl    : 40 seats created for Bus ID: 20
+2026-07-10T09:42:28.813+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        s1_0.seat_id,
+        s1_0.bus_id,
+        s1_0.created_at,
+        s1_0.reserved_booking_id,
+        s1_0.seat_number,
+        s1_0.seat_status,
+        s1_0.seat_type,
+        s1_0.updated_at 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+Hibernate: 
+    select
+        s1_0.seat_id,
+        s1_0.bus_id,
+        s1_0.created_at,
+        s1_0.reserved_booking_id,
+        s1_0.seat_number,
+        s1_0.seat_status,
+        s1_0.seat_type,
+        s1_0.updated_at 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+2026-07-10T09:42:28.813+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Creating booking for User ID: 20 on Bus ID: 20
+2026-07-10T09:42:28.814+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Number of passengers: 1
+2026-07-10T09:42:28.814+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        count(s1_0.seat_id) 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+Hibernate: 
+    select
+        count(s1_0.seat_id) 
+    from
+        seats s1_0 
+    where
+        s1_0.bus_id=? 
+        and s1_0.seat_status=?
+2026-07-10T09:42:28.814+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Total amount calculated: 500.0 (fare 500.0 x 1 passengers)
+2026-07-10T09:42:28.815+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Reservation expires at: 2026-07-10T10:12:28.815026817 (30-minute window)
+2026-07-10T09:42:28.815+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bookings
+        (booking_date, booking_status, bus_id, created_at, reservation_expires_at, total_amount, updated_at, user_id, booking_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        bookings
+        (booking_date, booking_status, bus_id, created_at, reservation_expires_at, total_amount, updated_at, user_id, booking_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.815+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking saved with auto-generated ID: 19. User will use this ID to complete payment.
+2026-07-10T09:42:28.815+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.fastx.service.impl.SeatServiceImpl   : Seat reserved (held for payment): B20-01 for Booking ID: 19
+2026-07-10T09:42:28.815+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        passengers
+        (age, booking_id, created_at, gender, name, seat_id, updated_at, passenger_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        passengers
+        (age, booking_id, created_at, gender, name, seat_id, updated_at, passenger_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.816+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Passenger added: Buddy (Age: 21) -> Seat: B20-01
+2026-07-10T09:42:28.816+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        payments
+        (amount, booking_id, created_at, payment_date, payment_method, payment_status, transaction_id, updated_at, payment_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payments
+        (amount, booking_id, created_at, payment_date, payment_method, payment_status, transaction_id, updated_at, payment_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, default)
+2026-07-10T09:42:28.816+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Pending payment record created for Booking ID: 19
+2026-07-10T09:42:28.816+05:30  INFO 66787 --- [FastX-Test] [           main] c.h.f.service.impl.BookingServiceImpl    : Booking created successfully! Booking ID: 19 | Status: PENDING | Seats: RESERVED for 30 mins | Complete payment to confirm.
+2026-07-10T09:42:28.817+05:30 DEBUG 66787 --- [FastX-Test] [           main] org.hibernate.SQL                        : 
+    select
+        p1_0.payment_id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.payment_date,
+        p1_0.payment_method,
+        p1_0.payment_status,
+        p1_0.transaction_id,
+        p1_0.updated_at 
+    from
+        payments p1_0 
+    where
+        p1_0.booking_id=?
+Hibernate: 
+    select
+        p1_0.payment_id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.payment_date,
+        p1_0.payment_method,
+        p1_0.payment_status,
+        p1_0.transaction_id,
+        p1_0.updated_at 
+    from
+        payments p1_0 
+    where
+        p1_0.booking_id=?
+]]></system-out>
+  </testcase>
+</testsuite>

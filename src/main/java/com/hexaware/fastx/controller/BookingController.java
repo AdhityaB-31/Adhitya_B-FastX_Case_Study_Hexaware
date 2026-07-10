@@ -75,19 +75,19 @@ public class BookingController {
             if (!booking.getUserId().equals(loggedInUser.getEntityId())) {
                 throw new UnauthorizedException("You can only view your own bookings.");
             }
-        } else {
+        } else if (!hasRole(loggedInUser, "ROLE_ADMIN")) {
             throw new UnauthorizedException("Access Denied: Admin role does not manage bookings.");
         }
         return new ResponseEntity<>(booking, HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<BookingDto>> getBookingsByUser(
             @PathVariable Long userId,
             @AuthenticationPrincipal FastXUserDetails loggedInUser) {
 
-        if (!loggedInUser.getEntityId().equals(userId)) {
+        if (!hasRole(loggedInUser, "ROLE_ADMIN") && !loggedInUser.getEntityId().equals(userId)) {
             throw new UnauthorizedException("You can only view your own bookings.");
         }
 
