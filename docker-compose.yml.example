@@ -1,0 +1,81 @@
+version: "3.9"
+
+services:
+
+  mysql:
+    image: mysql:8.4
+    container_name: fastx-mysql
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: YOUR_MYSQL_ROOT_PASSWORD
+      MYSQL_DATABASE: fastx_db
+      TZ: Asia/Kolkata
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    networks:
+      - fastx-network
+
+  backend:
+    build:
+      context: ./FastX_Backend
+
+    container_name: fastx-backend
+
+    restart: always
+
+    depends_on:
+      - mysql
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/fastx_db?serverTimezone=Asia%2FKolkata
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: YOUR_MYSQL_ROOT_PASSWORD
+
+      TZ: Asia/Kolkata
+
+      APP_FRONTEND_URL: http://localhost  # Update to production frontend URL if deployed
+
+      APP_MAIL_ENABLED: "true"
+
+      SPRING_MAIL_HOST: smtp.gmail.com
+      SPRING_MAIL_PORT: 587
+      SPRING_MAIL_USERNAME: YOUR_GMAIL_USERNAME
+      SPRING_MAIL_PASSWORD: YOUR_GMAIL_APP_PASSWORD
+
+      GOOGLE_CLIENT_ID: YOUR_GOOGLE_CLIENT_ID
+
+      RAZORPAY_KEY_ID: YOUR_RAZORPAY_KEY_ID
+      RAZORPAY_KEY_SECRET: YOUR_RAZORPAY_KEY_SECRET
+      RAZORPAY_WEBHOOK_SECRET: YOUR_RAZORPAY_WEBHOOK_SECRET
+
+    ports:
+      - "8080:8080"
+
+    networks:
+      - fastx-network
+
+  frontend:
+    build:
+      context: ./FastX_Frontend
+
+    container_name: fastx-frontend
+
+    restart: always
+
+    depends_on:
+      - backend
+
+    ports:
+      - "80:80"
+
+    networks:
+      - fastx-network
+
+networks:
+  fastx-network:
+
+volumes:
+  mysql_data:
